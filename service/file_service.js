@@ -20,3 +20,7 @@ export async function writeToFileJson(content) {
     await fs.writeFile("../data/data.json",JSON.stringify(content))
 
 }
+export async function readFRomJson(params) {
+    const read =await fs.readFile("../data/data.json","utf-8")
+    return JSON.parse(read)
+}
